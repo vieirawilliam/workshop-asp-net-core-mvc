@@ -1,22 +1,37 @@
 ﻿@model SalesWebMvc.Models.Department
 
 @{
-    ViewData["Title"] = "Details";
+    ViewData["Title"] = "Cadastro de departamento";
 }
 
-<h2>Details</h2>
+<h2>Consulta de departamentos</h2>
 
 <div>
-    <h4>Department</h4>
+    <h4>Departamentos</h4>
     <hr />
+
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Name)
+            @Html.DisplayNameFor(model => model.Id)
+
         </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Id)
+
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+
+        </dt>
+
         <dd>
             @Html.DisplayFor(model => model.Name)
+  
         </dd>
     </dl>
+
 </div>
 <div>
     <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
