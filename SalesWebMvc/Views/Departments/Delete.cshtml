@@ -10,18 +10,37 @@
 <div>
     <h4>Department</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-    </dl>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="well">
+                <dl class="dl-horizontal">
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Id)
+
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Id)
+
+                    </dd>
+
+                    <dt>
+                        @Html.DisplayNameFor(model => model.Name)
+
+                    </dt>
+
+                    <dd>
+                        @Html.DisplayFor(model => model.Name)
+
+                    </dd>
+                </dl>
+                <form asp-action="Delete">
+                    <input type="hidden" asp-for="Id" />
+                    <input type="submit" value="Delete" class="btn btn-default" /> |
+                    <a asp-action="Index" class="btn btn-default">Voltar</a>
+                </form>
+            </div>
+        </div>
+    </div>
     
-    <form asp-action="Delete">
-        <input type="hidden" asp-for="Id" />
-        <input type="submit" value="Delete" class="btn btn-default" /> |
-        <a asp-action="Index">Back to List</a>
-    </form>
 </div>
