@@ -30,7 +30,6 @@ namespace SalesWebMvc.Controllers
             return View(list);
         }
 
-
         public async Task<IActionResult> Create()
         {
             var departments = await _departmentService.FindAllAsync();
